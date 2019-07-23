@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GreenTech | Service</title>
+    <link rel="shortcut icon" href="./images/GreenTech.png" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="buttonStyle.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+
+<body onload="getDisease()">
+  <!--   HEADER AND NAVIGATION OPTION   -->
+  <header>
+    <a href="#" class="logo">GreenTech</a>
+    
+    <div class="menu-toggle"></div>
+    
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./monitor.html">Monitor</a></li>
+        <li><a href="./controlUnit.html">Control</a></li>
+        <li><a href="./service.html"  class="active">Service</a></li>
+        <li><a href="./about.html">About</a></li>
+      </ul>
+    </nav>
+    
+    <div class="clearfix"></div>
+  </header>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('.menu-toggle').click(function(){
+          $('.menu-toggle').toggleClass('active')
+          $('nav').toggleClass('active')
+        })
+      })
+    </script> 
+     
+    <div>
+      <div class="robot" style="position: absolute; color: #ffff; font-size: 30px; padding-left: 30px;">Enable the Robot</div>
+    
+      <script type="text/javascript" src="./robotButtonUpdate.js"></script> 
+    
+      <label class='toggle-label'>
+        <input type='checkbox' id="robot" onclick=robottog() />
+        <span class='back'>
+          <span class='toggle'></span>
+          <span class='label on'>ON</span>
+          <span class='label off'>OFF</span>  
+        </span>
+      </label>
+    </div>
+
+    <br>
+
+    <span>
+      <p id="diseaseID" onclick="getDisease()" style="margin-left: 5%; color: white; font-size: 25px;"> Your plant may be affect by  
+      .......</p>
+      <a href id="infopad" style="margin-left: 5%; color: white; font-size: 25px;">more..info<a>
+    </span>
+      
+    <script type="text/javascript">
+      var disease="";
+
+      function getDisease(){
+        $.get("https://api.thingspeak.com/apps/thinghttp/send_request?api_key=############", function(data){
+        disease = data;
+        document.getElementById("diseaseID").innerHTML = 'Your plant may be affect by '+disease;
+        getinfo(disease);
+         });
+      }
+
+      function getinfo(disease){
+        if(disease=="Cercospora Leaf Spot"){
+        document.getElementById("infopad").href="https://sites.google.com/view/plantdiesease/cercospora-leaf-spot"; 
+          }
+           if(disease=="Bacterial Blight"){
+        document.getElementById("infopad").href="https://sites.google.com/view/plantdiesease/bacterial-blight";
+          }
+           if(disease=="Alternaria Alternata"){
+          document.getElementById("infopad").href="https://sites.google.com/view/plantdiesease/alternaria-alterneta";
+        }
+         if(disease=="Anthracnose"){
+          document.getElementById("infopad").href="https://sites.google.com/view/plantdiesease/anthracanose";
+        }
+      }
+    </script>
+      
+    <iframe src="/repos.php" align="left" width="99%" height="800px " frameborder="0" scrolling="yes" scrollbar="hidden" style="margin: 10px; margin-top: 30px;"></iframe>
+
+  </body> 
+</html> 
+

@@ -1,0 +1,636 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Viga');
+
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: Roboto Slab, Viga, sans-serif;
+	background-image: linear-gradient(to right, #00875c , #5c8700); 
+	background-attachment: fixed;
+}
+
+/* Header and Navigation bar Stylling*/
+header {
+	position: relative;
+	font-family: sans-serif;
+	max-width: 1200px;
+	margin: 20px auto;
+	padding: 10px;
+	background: #fff;
+	box-sizing: border-box;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0,0,0,.2);
+	z-index: 500px;
+}
+
+.logo {
+	color: #069370;
+	height: 60px;
+	font-size: 36px;
+	line-height: 60px;
+	padding: 0 20px;
+	background: #fffff1;
+	text-align: center;
+	box-sizing: border-box;
+	float: left;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+nav {
+	float: right;
+	font-family: Viga;
+}
+
+.clearfix {
+	clear: both;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+nav ul li {
+	list-style: none;
+}
+
+nav ul li a {
+	display: block;
+	margin: 10px 0;
+	padding: 10px 20px;
+	text-decoration: none;
+	color: #262626;
+}
+
+nav ul li a.active {
+	background: #069370;
+	color: #fff;
+	transition: 0.5s;
+	border-radius: 6px;
+}
+
+nav ul li a:hover {
+	background: #3c9e87;
+	color: #fff;
+	transition: 0.5s;
+	border-radius: 6px;
+}
+
+@media (max-width: 1200px)
+{
+	header {
+		margin: 10px;
+	}
+}
+
+@media only screen and (max-width: 980px) and (min-width: 727px)
+{
+	.logo {
+		color: #069370;
+		height: 80px;
+		font-size: 70px;
+		line-height: 140px;
+		padding: 0 20px;
+		background: #fffff1;
+		text-align: center;
+		box-sizing: border-box;
+		float: left;
+		font-weight: 700;
+		text-decoration: none;
+	}
+
+	.menu-toggle {
+		display: block;
+		width: 40px;
+		height: 80px;
+		margin: 30px;
+		float: right;
+		cursor: pointer;
+		text-align: center;
+		font-size: 70px;
+		color: #069370;
+	}
+
+	.menu-toggle:before {
+		content: '\f0c9';
+		font-family: fontAwesome;
+		line-height: 40px;
+	}
+
+	.menu-toggle.active:before {
+		content: '\f00d';
+		font-family: fontAwesome;
+		line-height: 40px;
+	}
+
+	nav {
+		display: none;
+	}
+
+	nav.active {
+		display: block;
+		width: 100%;
+	}
+
+	nav.active ul {
+		display: block;
+	}
+
+	nav.active ul li {
+		margin: 10px;
+		padding: 0px 20px; 
+	}
+
+	nav.active ul li a{
+		margin: 0px;
+		text-align: center;
+		font-size: 80px;
+	}
+}
+
+@media (max-width: 728px)
+{
+	.menu-toggle {
+		display: block;
+		width: 40px;
+		height: 50px;
+		margin: 10px;
+		float: right;
+		cursor: pointer;
+		text-align: center;
+		font-size: 35px;
+		color: #069370;
+	}
+
+	.menu-toggle:before {
+		content: '\f0c9';
+		font-family: fontAwesome;
+		line-height: 40px;
+	}
+
+	.menu-toggle.active:before {
+		content: '\f00d';
+		font-family: fontAwesome;
+		line-height: 40px;
+	}
+
+	nav {
+		display: none;
+	}
+
+	nav.active {
+		display: block;
+		width: 100%;
+	}
+
+	nav.active ul {
+		display: block;
+	}
+
+	nav.active ul li {
+		margin: 0;
+	}
+
+	nav.active ul li a{
+		margin: 0;
+		text-align: center;
+	}
+}
+
+/*MAIN BODY STYLLING*/
+.subtitile {
+	text-align: center;
+	margin: 50px 10px;
+	font-size: 30px;
+	font-family: Patua One;
+}
+
+.subtitile h1 {
+	text-indent: 50px;
+	color: #ffefef;
+	text-shadow: 3px 2px #555555;
+	word-spacing: 10px;
+}
+
+.button {
+  border-radius: 10px;
+  background-color: #00b7ff;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 25px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button span a {
+	text-decoration: none;
+	color: #cccccc;
+	font-size: 35px;
+	transition: .3s;
+}
+.button span a i {
+	font-size: 20px;
+	transition: .3s;
+}
+
+.button:hover span a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 0px;
+}
+
+.button:hover span a i {
+	font-size: 35px;
+	padding-right: 20px;
+}
+
+.indexContainer {
+	float: left;
+	display: flex;
+	font-size: 30px;
+	line-height: 50px;
+	list-style-position: outside;	
+	padding: 10vh;
+}
+
+.indexContainerList {
+	list-style-type: circle;
+}
+#indexContainer {
+	color: #ffefef;
+	text-align: justify;
+  	text-justify: inter-word;	
+}
+
+@media only screen and (max-width: 980px) {
+	.subtitile h1 {
+
+		font-size: 25px;
+		margin: 0px;
+		padding: 0px;	
+		text-indent: 10px;
+	}
+
+	.button{
+		font-size: 20px;
+		width: 150px;
+		margin: 20px; 
+	}
+
+	.button span a {
+		font-size: 0;	
+	}
+	.button span a i {
+		font-size: 30px;
+	}
+
+	.indexContainer {
+		text-align: center;	
+		font-size: 	20px;
+		line-height: 25px;
+		list-style-position: outside;	
+		margin-left: 0px;
+		padding: 0vh;
+	}
+}
+
+/*MONITOR STYLLING*/
+/*CIRCULAR PROGRESS BAR STYLLING*/
+.GaugeMeter{
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    cursor: default;
+  }
+
+  .GaugeMeter span,
+  .GaugeMeter b{
+    margin:          0 23%;
+    width:           54%;
+    position:        absolute;
+    text-align:      center;
+    display:         inline-block;
+    color:           rgba(0,0,0,.8);
+    font-weight:     100;
+    font-family:     "Open Sans", Arial;
+    overflow:        hidden;
+    white-space:     nowrap;
+    text-overflow:   ellipsis;
+  }
+  .GaugeMeter[data-style="Semi"] b{
+    margin:          0 10%;
+    width:           80%;
+  }
+
+  .GaugeMeter s,
+  .GaugeMeter u{
+    text-decoration: none;
+    font-size:       .5em;
+    opacity:         .5;
+  }
+
+  .GaugeMeter b{
+    color:           black;
+    font-weight:     300;
+    font-size:       .5em;
+    opacity:         .8;
+  }
+	
+.sensorRow {
+	display: -webkit-flex; /* Safari */
+  	-webkit-align-items: center; /* Safari 7.0+ */
+  	display: flex;
+  	align-items: center;
+  	margin-top: 100px;
+}
+
+#PreviewGaugeMeter_1, #PreviewGaugeMeter_2, #PreviewGaugeMeter_3, #PreviewGaugeMeter_4 {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#chart {
+padding: 1%;
+border-radius: 2%;	
+}
+.graph {
+	width: 33%;
+	height: 20em;
+}
+
+@media only screen and (max-width: 980px)  {
+	.sensorRow {
+		display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin: 10% 0;
+        min-height: 200px;
+        align-items: center;
+	}
+
+
+	#soilgraph {
+		padding-left: 4vh;	
+		width: 20em;
+	}
+
+	#tempgraph {
+		padding-left: 4vh;	
+		width: 20em;
+	}
+
+	#humidgraph {
+		padding-left: 4vh;	
+		width: 20em;
+	}
+
+	#lightgraph {
+		padding-left: 4vh;	
+		width: 20em;
+	}
+}
+
+/*CONTROL UNIT STYLLING*/
+.autoOrManual {
+	margin-top: 50px;
+}
+
+/* .slideThree */
+.slideThree {
+  width: 220px;
+  height: 80px;
+  background: #093d00/*#333*/;
+  margin: 20px auto;
+  position: relative;
+  border-radius: 60px;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+}
+
+.slideThree:after {
+  content: 'MANUAL';
+  color: #eeefff/*#000*/;
+  position: absolute;
+  top: 28px;
+  right: 10px;
+  z-index: 0;
+  font: 20px/26px Arial, sans-serif;
+  font-weight: bold;
+}
+
+.slideThree:before {
+  content: 'AUTO';
+  color: #00ff3b;
+  position: absolute;
+  top: 28px;
+  left: 10px;
+  z-index: 0;
+  font: 20px/26px Arial, sans-serif;
+  font-weight: bold;
+}
+
+.slideThree label {
+  display: block;
+  width: 100px;
+  height: 70px;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  left: 3px;
+  z-index: 1;
+  background: #fcfff4;
+  background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  border-radius: 50px;
+  transition: all 0.4s ease;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.slideThree input[type=checkbox] {
+  visibility: hidden;
+}
+
+.slideThree input[type=checkbox]:checked + label {
+  left: 117px;
+}
+/* end .slideThree */
+
+/*Dropdown menu*/
+#plantSelect {
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 2px;
+}
+
+/* Reset Select plantOption*/
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #4c9937;
+  background-image: none;
+}
+
+/* Custom Select plantOption*/
+.plantOption {
+  position: relative;
+  display: block;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background: #ffffff;
+  overflow: hidden;
+  border-radius:  10px 10px 0px 0px;
+}
+
+select {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0 0 0 .5em;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: Roboto Slab;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+/* Arrow */
+.plantOption::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 1em;
+  background: #007c00;
+  pointer-events: none;
+}
+
+/* Transition */
+.plantOption:hover::after {
+  color: #33f211;
+}
+.plantOption::after {
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
+
+.descriptionList {
+	float: left;
+	position: relative;
+	margin-left: 5em;
+	margin-top: 10em;
+	color: #ffffff;
+	text-align: center;
+}
+
+#pTomato {
+	vertical-align: middle;
+	height: 20%;
+	width: 20%;
+}
+
+#pBrinjal {
+	vertical-align: middle;
+	height: 20%;
+	width: 20%;
+}
+
+#pCapsicum {
+	vertical-align: middle;
+	height: 50%;
+	width: 50%;
+}
+
+.footer{
+	font-size: 12px;
+}
+
+@media only screen and (max-width: 980px){
+	#choiceButton {
+		margin-left: 10px;
+	}
+
+	#plantSelect {
+	  position: relative;
+	  margin: 45px auto auto 5%;
+	  top: 65%;
+	  left: 50%;
+	}
+
+	.descriptionList {
+		margin-top: 1em;
+		margin-left: 3em;
+		text-align: left;
+	}
+
+	#pTomato #pBrinjal {
+		height: 10%;
+		width: 10%;
+	}
+
+	#pCapsicum {
+		height: 20%;
+		width: 20%;
+	}
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 0px 0px 10px 0px;
+  box-shadow: 5px;
+}
+
+.footer img {
+	padding: 0;
+}

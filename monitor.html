@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GreenTech | Monitor</title>
+  <link rel="shortcut icon" href="./images/GreenTech.png" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="./GaugeMeter.js"></script>
+</head>
+
+<body>
+  <!--   HEADER AND NAVIGATION OPTION   -->
+  <header>
+    <a href="./index.html" class="logo">GreenTech</a>
+
+    <div class="menu-toggle"></div>
+
+    <nav>
+      <ul>
+        <li><a href="./index.html" >Home</a></li>
+        <li><a href="./monitor.html" class="active">Monitor</a></li>
+        <li><a href="./controlUnit.html">Control</a></li>
+        <li><a href="./service.html">Service</a></li>
+        <li><a href="./about.html">About</a></li>
+      </ul>
+    </nav>
+
+    <div class="clearfix"></div>
+  </header>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.menu-toggle').click(function(){
+        $('.menu-toggle').toggleClass('active')
+        $('nav').toggleClass('active')
+      })
+    })
+  </script>
+
+  <!-- CIRCULAR PROGRESS BAR  -->
+  <div class="sensorRow" align="center">
+    <div class="GaugeMeter" id="PreviewGaugeMeter_1"
+      data-size="350"
+      data-prepend="null"
+      data-append="%"
+      data-theme=""
+      data-color="RGBa(0,0,0,.1)
+      data-back="Silver"
+      data-width="20"
+      data-style="Arch"
+      data-animationstep = 100
+      data-animate_gauge_colors=true
+      data-animate_text_colors=true
+      data-label="<font style='color:White;font-size:30px;letter-spacing:-1px'>Soil Moisture</font>"
+      data-label_color="#FFF"
+      data-showvalue=false></div>
+
+  <div class="GaugeMeter" id="PreviewGaugeMeter_2"
+      data-size="350"
+      data-prepend=""
+      data-append="&#8451"
+      data-theme="Green-Gold-Red"
+      data-color="RGBa(0,0,0,.1)
+      data-back="Silver"
+      data-width="20"
+      data-style="Arch"
+      data-animationstep = 100
+      data-animate_gauge_colors=true
+      data-animate_text_colors=true
+      data-text="null"
+      data-label="<font style='color:White;font-size:30px;letter-spacing:-1px'>Temperature</font>"
+      data-label_color="#FFF"
+      data-showvalue=false></div>
+
+  <div class="GaugeMeter" id="PreviewGaugeMeter_3"
+      data-size="350"
+      data-prepend=""
+      data-append="%"
+      data-theme="Blue"
+      data-color="RGBa(0,0,0,.1)
+      data-back="Silver"
+      data-width="20"
+      data-style="Arch"
+      data-animationstep = 100
+      data-animate_gauge_colors=true
+      data-animate_text_colors=true
+      data-text="null"
+      data-label="<font style='color:White;font-size:30px;letter-spacing:-1px'>Humidity</font>"
+      data-label_color="#FFF"
+      data-showvalue=false></div>
+  </div> 
+
+  <div class="GaugeMeter" id="PreviewGaugeMeter_4"
+      data-size="350"
+      data-prepend=""
+      data-append="%"
+      data-theme="White"
+      data-color="RGBa(0,0,0,.1)
+      data-back="Silver"
+      data-width="20"
+      data-style="Arch"
+      data-animationstep = 100
+      data-animate_gauge_colors=true
+      data-animate_text_colors=true
+      data-text="null"
+      data-label="<font style='color:White;font-size:30px;letter-spacing:-1px'>Ambient Light</font>"
+      data-label_color="#FFF"
+      data-showvalue=false></div>
+  </div> 
+
+  <div id="chart">
+    <iframe class="graph" id="soilgraph" frameborder="0" src="https://app.ubidots.com/ubi/getchart/#####################"></iframe>
+
+    <iframe class="graph" id="tempgraph" frameborder="0" src="https://app.ubidots.com/ubi/getchart/#####################"></iframe>
+
+    <iframe class="graph" id="humidgraph" frameborder="0" src="https://app.ubidots.com/ubi/getchart/#####################"></iframe>
+
+    <iframe class="graph" id="lightgraph" frameborder="0" src="https://app.ubidots.com/ubi/getchart/#####################"></iframe>
+  </div>
+
+  <script> //script for the circular progress bar
+    $(document).ready(function(){
+      $(".GaugeMeter").gaugeMeter();
+    });
+  </script>
+
+  <script type="text/javascript" src="./sensorMonitor.js"></script>
+ 
+	<!-- WEATHER WIDGES -->
+  <a class="weatherwidget-io" href="https://forecast7.com/en/12d9******/location/" data-label_1="LOCATION" data-label_2="WEATHER" data-theme="pure" >WEATHER</a>
+
+  <script>
+  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+  </script>
+
+</body>
+</html>

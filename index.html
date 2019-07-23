@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GreenTech | Home</title>
+    <link rel="shortcut icon" href="./images/GreenTech.png" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+  <!--   HEADER AND NAVIGATION OPTION   -->
+  <header>
+    <a href="./index.html" class="logo">GreenTech</a>
+
+    <div class="menu-toggle"></div>
+
+    <nav>
+      <ul>
+        <li><a href="./index.html" class="active">Home</a></li>
+        <li><a href="./monitor.html">Monitor</a></li>
+        <li><a href="./controlUnit.html">Control</a></li>
+        <li><a href="./service.html">Service</a></li>
+        <li><a href="./about.html">About</a></li>
+      </ul>
+    </nav>
+
+    <div class="clearfix"></div>
+  </header>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.menu-toggle').click(function(){
+        $('.menu-toggle').toggleClass('active')
+        $('nav').toggleClass('active')
+      })
+    })
+  </script> 
+
+  <div class="subtitile">
+    <h1 style="color: white">SELF REGULATING INTELLIGENCE PLATFORM FOR GREENHOUSE FARMERS</h1>
+    
+    <div>
+      <button class="button"><span><a href="./monitor.html"><i class="fa fa-area-chart"></i> Monitor</a></span></button>
+      <button class="button"><span><a href="./controlUnit.html"><i class="fa fa-cogs"></i> Control</a></span></button>
+    </div>
+
+  <footer class="footer">
+    <div>powered by Analog Devices <img src="./images/ADI.png" height="12px"> </div>
+  </footer>
+
+  </body> 
+</html> 
+

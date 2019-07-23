@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GreenTech|About</title>
+    <link rel="shortcut icon" href="./images/GreenTech.png" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="aboutStyle.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  </head>
+
+  <body>
+<!--   HEADER AND NAVIGATION OPTION   -->
+<header>
+  <a href="./index.html" class="logo">GreenTech</a>
+  <div class="menu-toggle"></div>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./monitor.html">Monitor</a></li>
+        <li><a href="./controlUnit.html">Control</a></li>
+        <li><a href="./service.html">Service</a></li>
+        <li><a href="./about.html" class="active">About</a></li>
+      </ul>
+    </nav>
+    <div class="clearfix"></div>
+  </header>
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.menu-toggle').click(function(){
+        $('.menu-toggle').toggleClass('active')
+        $('nav').toggleClass('active')
+      })
+    })
+  </script> 
+
+  <!-- -------------------------------- -->  
+  <h1>About</h1>
+  <div class="aContainer">  
+    <div id="p1"> Simplify and enhance greenhouse cultivation.
+      <h3>  OverView</h3>
+      <ul >  
+        <li> Are you tired of spending money on plants and crops that don't produce or die before they even get started?</li>
+        <li>Controlling most of the aspects of the system from remote location over web app</li>
+        <li>Auto-Mode support helps in carrying out irrigation without human intervention</li>
+        <li>The details of soil moisture level, humidity and temperature are directly streamed over to WEB app</li>
+        <li>Provides Real-time status of the irrigation progress.</li>
+        <li>Helps in deciding next irrigation schedule.</li>
+        <li>Regular diagnosis of plant diseases though self maneuvering</li>
+        <li>Daily Visual update and statistics  of plant growth</li>
+      </ul>
+  </div>
+  
+  <h3>Support</h3>
+  <div class="bContainer">  
+    <div id="p2">Green House technology is very useful technique used to achieve significant improvements in the field of agriculture to get high quality yield, by efficient utilization of water with better cultivation methods.<br><br> 
+Providing controlled environment condition to ensure the quality and productivity of the plant growth, depending on temperature, humidity, light and soil moisture and other environmental conditions is very important in Green Houses.<br><br> 
+Monitoring this valuable information not only helps the framer but also plays an important role in automation. In Today’s busy life it is very difficult for the farmer to keep track about the progress in his farm, it is tedious to take decisions due to unpredictable weather conditions.<br> <br>
+To overcome these problems one can, take help of technology which is smart enough to take the decisions based on environmental conditions and notify the farmer about the developments in his farm. It is excellent to have a system which communicates through WEB app and could be easily controllable, which makes a need for emergence of “Self-Regulating Platform for Green House Farmers”.<br> <br>
+    </div>
+  </div>
+
+  </body> 
+</html> 
+

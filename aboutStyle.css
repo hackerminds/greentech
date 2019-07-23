@@ -1,0 +1,51 @@
+/*ABOUT STYLLING*/
+
+.aContainer  {
+	position: relative;
+	margin: 100px 200px;
+	color: #cccccc
+
+}
+
+h1 {
+	color: white;
+	font-size: 50px;
+	float: right;
+	display: flex;
+	position: relative;
+	margin: 0 200px;
+}
+
+.aContainer #p1 {
+	position: relative;
+	text-align: right;
+  text-justify: inter-word;
+
+}
+.aContainer #p1  h3{text-align: right;}
+.aContainer #p1  ul{
+	position: relative;
+	text-align: left;
+  text-justify: inter-word;
+}
+
+.bContainer {
+	position: relative;
+	margin: auto 0px;
+	display: flex;
+	color: #cccccc
+}
+
+h3 {
+	font-size: 30px;
+	color: white;
+	position: relative;
+	margin: auto 100px;
+	display: flex;
+	padding-bottom: 20px;
+}
+
+.bContainer #p2 {
+	text-align: justify;
+  text-justify: inter-word;
+}

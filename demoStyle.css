@@ -1,0 +1,18 @@
+p {
+	padding: 10px  0 0 20%;
+	color: white;
+	font-size: 30px;
+}
+.demoDiv {
+	margin: 0px auto auto 30%;
+}
+
+input {
+	padding: 10px;
+	color: blue;
+}
+
+div {
+	padding-top: 10px;
+	padding-left: 10px;
+}
