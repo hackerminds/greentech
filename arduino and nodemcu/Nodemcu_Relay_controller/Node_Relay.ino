@@ -1,8 +1,8 @@
 #include "UbidotsESPMQTT.h"
 
-#define TOKEN "A1E-x3McHbMANDj9zdkdasXd6GrwtMGEH1" // Your Ubidots TOKEN
-#define WIFINAME "Hrishi" //Your SSID
-#define WIFIPASS "hrishi98" // Your Wifi Pass
+#define TOKEN "XXXXXXXX.........XXX" // Your Ubidots TOKEN
+#define WIFINAME "SSID" //Your SSID
+#define WIFIPASS "PASSWORD" // Your Wifi Pass
 
 #define offset 4
 
