@@ -1,8 +1,8 @@
 # PROJECT GREENTECH
 
-# NOTE : This webpage hosted here might not work as expected because the essential ubidots tokens are removed due to privacy reasons! please substitute the XXXXXXXX marked places in javascripts with your tokens!
+### NOTE : This webpage hosted here might not work as expected because the essential ubidots tokens are removed due to privacy reasons! please substitute the XXXXXXXX marked places in javascripts with your tokens!
 
-# This is the project exhibited in the Analog Device Anveshan Fellowship program
+## This is the project exhibited in the Analog Device Anveshan Fellowship program
 
 This project concern about cultivation of crops in Green-House 
 There are three module 
