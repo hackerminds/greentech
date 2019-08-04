@@ -21,7 +21,7 @@ def capture_upload(plantcount=1):
         print("uploading to cloud..........")
 
         print("initiating upload to ftp")
-        session = ftplib.FTP('ftp.mytechstuff.net','rayan1234567@mytechstuff.net','rayan1234567')
+        session = ftplib.FTP('ftp.myte.net','FTP@FTP.NET','PASSWORD')
         file = open('/home/pi/tomato.jpg','rb')                  # file to send
 
 ##        plantcount=plantcount+1
