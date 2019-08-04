@@ -1,4 +1,6 @@
-# greentech
+# PROJECT GREENTECH
+
+# NOTE : This webpage hosted here might not work as expected because the essential ubidots tokens are removed due to privacy reasons! please substitute the XXXXXXXX marked places in javascripts with your tokens!
 
 # This is the project exhibited in the Analog Device Anveshan Fellowship program
 
@@ -18,7 +20,7 @@ There are three module
   - Water Pump
   - Cooling Fan
   
-# Software Use
+# Software Used
   - Ubidots Platfrom
   - Arduino IDE
   - VS Code
