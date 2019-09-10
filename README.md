@@ -29,4 +29,4 @@ There are three module
 
 # Library Used
  - https://github.com/ubidots/ubidots-mqtt-esp/blob/master/src/UbidotsESPMQTT.h
- - https://github.com/knolleary/pubsubclient
+ - https://github.com/knolleary/pubsubclient or https://www.arduinolibraries.info/libraries/pub-sub-client
