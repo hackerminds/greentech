@@ -17,6 +17,8 @@ unsigned int temperature;
 unsigned int moisture;
 unsigned int intensity;
 
+String inputString = "";
+
 void setup() 
 {
   Wire.begin();
